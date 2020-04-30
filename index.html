@@ -41,10 +41,6 @@
     <!-----Fonts----->
     <link href="https://fonts.googleapis.com/css?family=Akronim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'webapp/Login/Login_v6/fonts/iconic/css/material-design-iconic-font.min.css' %}">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'webapp/Login/Login_v6/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -97,7 +93,7 @@
                     <h6 class="mt-3 mb-3">Enter your pincode, city or state</h6>
                 </div>
                 -->
-                <form action="/searchresult" method="POST">
+                <form action="list_of_initiatives.html" method="POST">
                     <div class="autocomplete row justify-content-center mx-5">
                         <div class="input-group flex-nowrap">
                             <input id="myInput" type="text" name="myCountry" class="form-control"
@@ -219,106 +215,6 @@
                             View&nbsp&nbsp<i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col mt-lg-0">
-            <div class="card-custom p-5">
-                <div class="step3-title row justify-content-between">
-                    <h4 class="col-6">FOOD</h4>
-                    <div class="search-filter col-6">
-                        <div class="row justify-content-end">
-                            <p class="align-items-center justify-content-center" style="margin-bottom: 0px;">
-                                Filter:&nbsp&nbsp</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false" style="text-transform: capitalize">Choose Filter...
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">State Government</a>
-                                    <a class="dropdown-item" href="#">Central Government</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div><!-- /btn-group -->
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <table class="table step3-table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Initiative</th>
-                            <th scope="col">Contact No</th>
-                            <th scope="col">Link</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="initiative-heading">
-                                    <h6>Public Food Shelter with a long name for 2 lines.</h6>
-
-                                </div>
-                                <div class="initiative-description">
-                                    <p>Noti Karanprayag Rd, near Tehsil Office, Karanprayag, Uttarakkhand 246444</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="initiative-contact">
-                                    <p><a href="">01334-235010</a>,
-                                        <a href="">9897059100</a>,
-                                        <a href=""> 9458946719</a></p>
-                                </div>
-                            </td>
-                            <td><a href="">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="initiative-heading">
-                                    <h6>This is another food shelter in vijayawada</h6>
-
-                                </div>
-                                <div class="initiative-description">
-                                    <p>Noti Karanprayag Rd, near Tehsil Office, Karanprayag, Uttarakkhand 246444</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="initiative-contact">
-                                    <p><a href="">01334-235010</a>,
-                                        <a href="">9897059100</a>,
-                                        <a href=""> 9458946719</a></p>
-                                </div>
-                            </td>
-                            <td><a href="">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="initiative-heading">
-                                    <h6>Public Food Shelter with a long name for 2 lines.</h6>
-
-                                </div>
-                                <div class="initiative-description">
-                                    <p>Noti Karanprayag Rd, near Tehsil Office, Karanprayag, Uttarakkhand 246444</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="initiative-contact">
-                                    <p><a href="">01334-235010</a>,
-                                        <a href="">9897059100</a>,
-                                        <a href=""> 9458946719</a></p>
-                                </div>
-                            </td>
-                            <td><a href="">View</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
