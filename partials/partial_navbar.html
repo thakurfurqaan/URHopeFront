@@ -1,0 +1,161 @@
+<!-----Navbar Starts---->
+<nav class="navbar navbar-expand-lg not-fixed-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="align-self: center; font-size: x-large;"></i></span>
+    </button>
+
+    <a class="navbar-brand d-lg-none d-xl-none nav-logo-md-sm-xs" href="{% url 'home_page' %}">
+        <img src="{% static 'webapp/images/output-onlinepngtools3.png' %}" alt="">
+    </a>
+
+
+    <a class="navbar-brand d-lg-none d-xl-none" href="{% url 'cart' %}">
+        <i class="fa fa-shopping-cart resp"
+           style="{% if request.resolver_match.view_name == 'cart' %} color: #F9A602; {% endif %}">
+        </i>&nbsp
+        <div class="spinner-border spinner-border-sm text-warning cart-badge-loader" role="status"
+             style="display: none">
+        </div>
+        <span class="badge badge-light cart-badge">{{ no_of_products_in_cart }}</span>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item {% if request.resolver_match.view_name == 'home_page' %} active {% endif %}">
+                <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+            </li>
+
+            {% for category in categories %}
+                <div class="dropdown-divider"></div>
+                <li class="nav-item {% if request.resolver_match.view_name == 'category_wise' and cat == category %}
+                                active {% endif %}">
+                    <a class="nav-link" href="{% url 'category_wise' category.slug %}">{{ category }}</a>
+                </li>
+            {% endfor %}
+
+            <div class="dropdown-divider"></div>
+
+            <li class="nav-item d-lg-none d-xl-none">
+                <a class="nav-link" href="#">Wishlist</a>
+            </li>
+
+            <div class="dropdown-divider"></div>
+
+            <li class="nav-item d-lg-none d-xl-none">
+                <a class="nav-link dropdown-toggle d-lg-none d-xl-none" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                </div>
+            </li>
+        </ul>
+
+        <a class="navbar-brand nav-logo-lg-xl mx-auto" href="{% url 'home_page' %}">
+            <img src="{% static 'webapp/images/output-onlinepngtools4.png' %}" height="50" alt="">
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-none d-lg-block d-xl-block">
+                <a class="nav-link " style="font-size: large;{% if request.resolver_match.view_name == 'account' %}
+                    color: #F9A602; {% endif %}" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {% if user.is_authenticated %}
+                        <span style="text-transform: capitalize; font-size: medium">{{ user.username }}&nbsp</span>{% endif %}
+                    <i class="fa fa-user" style="font-size: medium;"></i>
+                </a>
+                <div class="dropdown-menu" style="left: auto;" aria-labelledby="navbarDropdown">
+                    {% if user.is_authenticated %}
+                        <a class="dropdown-item" href="{% url 'register' %}">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+
+            <li class="nav-item d-none d-lg-block d-xl-block">
+                <a class="nav-link" style="font-size: large;{% if request.resolver_match.view_name == 'wishlist' %}
+                    color: #F9A602; {% endif %}" href="#"><i class="fa fa-heart"> </i></a>
+            </li>
+            <li class="nav-item d-none d-lg-block d-xl-block">
+                <a class="nav-link" style="font-size: large;{% if request.resolver_match.view_name == 'cart' %}
+                    color: #F9A602; {% endif %}" href="{% url 'cart' %}"><i
+                        class="fa fa-shopping-cart"></i>&nbsp
+                    <span class="spinner-border spinner-border-sm text-warning cart-badge-loader" role="status"
+                          style="display: none"></span>
+                    <span class="badge badge-light cart-badge">{{ no_of_products_in_cart }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-----Navbar Ends---->
+
+<div id="users-device-size">
+    <div id="xs" class="d-block d-sm-none"></div>
+    <div id="sm" class="d-none d-sm-block d-md-none"></div>
+    <div id="md" class="d-none d-md-block d-lg-none"></div>
+    <div id="lg" class="d-none d-lg-block d-xl-none"></div>
+    <div id="xl" class="d-none d-xl-block"></div>
+</div>
+
+<div class="compensate-gap"></div>
+
+
+<script>
+    var $nav = $('.not-fixed-top');
+    var $prev_pos = $nav.position().top;
+    var $nav_logo = $('.nav-logo-lg-xl');
+    $nav_logo.hide();
+
+    //Set Carousel Height
+    $(document).ready(function () {
+        var $h = $(window).height() - $('.main-logo').outerHeight() - $('nav').outerHeight();
+        if ((getBootstrapDeviceSize() == 'md') || (getBootstrapDeviceSize() == 'lg') || (getBootstrapDeviceSize() == 'xl'))
+            $('.carousel-item img').height($h);
+        else $('.carousel-item img').height(350);
+
+        if ((getBootstrapDeviceSize() == 'xs') || (getBootstrapDeviceSize() == 'sm')) $nav.addClass('fixed-top');
+    });
+
+    // Change non-fixed navbar to fixed navbar when scrolled
+    $(function () {
+        $(document).scroll(function () {
+            if ($(this).scrollTop() > $prev_pos) {
+                $nav.addClass('fixed-top');
+                if ((getBootstrapDeviceSize() == 'md') || (getBootstrapDeviceSize() == 'lg') || (getBootstrapDeviceSize() == 'xl'))
+                    $nav_logo.show();
+            } else removeFixedTop();
+        });
+    });
+
+    // Get the device width
+    function getBootstrapDeviceSize() {
+        return $('#users-device-size').find('div:visible').first().attr('id');
+    }
+
+    function removeFixedTop() {
+        if (((getBootstrapDeviceSize() == 'md') || (getBootstrapDeviceSize() == 'lg') || (getBootstrapDeviceSize() == 'xl'))) {
+            $nav.removeClass('fixed-top');
+            $nav_logo.hide();
+        }
+    }
+
+    // Snackbar
+    function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 10000);
+    }
+
+</script>

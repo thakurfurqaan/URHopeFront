@@ -10,10 +10,10 @@ db = pymysql.connect(host='localhost', user='root', passwd='CoronaPassword.1#',
 c = db.cursor()
 keys = ['pin', 'officename', 'divisionname', 'regionname', 'circlename', 'taluk', 'districtname', 'statename', 'relsuboffice']
 key_map = {}
-with ZipFile("./india_po_data.csv.zip", "r") as z:
+with ZipFile("india_po_data.csv.zip", "r") as z:
     z.extractall()
 
-with open("./india_po_data.csv") as f:
+with open("india_po_data.csv") as f:
     for i, j in enumerate(f.readlines()):
         headers = []
         if not i:
@@ -37,5 +37,5 @@ with open("./india_po_data.csv") as f:
 
         # if i ==11:
         #     break
-os.remove("./india_po_data.csv")
+os.remove("india_po_data.csv")
 db.close()
