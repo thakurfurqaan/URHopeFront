@@ -54,7 +54,8 @@
 
 </head>
 
-<body class="landing-page">
+<body class="landing-page"
+      style="background-size: cover; background: url('static/assets/img/background.png') no-repeat center;">
 
 <!-- Navbar -->
 <div class="partials_navbar_import"></div>
@@ -65,8 +66,7 @@
 </script>
 <!-- End Navbar -->
 
-<div class="container-fluid"
-     style="background-size: cover; background: url('static/assets/img/background.png') no-repeat center;">
+<div class="container-fluid">
     <div class="col page-title">
         <div class="row align-items-center justify-content-center" align="center">
             <h1 class="font-weight-bolder">UR</h1>
@@ -86,18 +86,74 @@
     </div>
 </div>
 
-<!-----PLACE REGISTRATION FORM HERE-------->
+<div class="container mt-0">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-12">
+            <div class="card-custom mt-2 mt-lg-0 help-card">
+                <form action="list_of_initiatives.html">
+                    <h4 class="font-weight-bold my-3" style="text-align: center">Register</h4>
+                    <div class="input-group mb-3 px-lg-3">
+
+                        <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 px-lg-3">
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                      <div class="input-group mb-3 px-lg-3">
+                        <select class="custom-select" id="inputGroupSelect03">
+                            <option selected>--- Select Role ---</option>
+                            <option value="1">Volunteer</option>
+                            <option value="2">NGO</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3 px-lg-3">
+                        <input type="number" class="form-control" placeholder="Pincode" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 px-lg-3">
+                        <input type="tel" class="form-control" placeholder="Phone No" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                      <div class="input-group mb-3 px-lg-3">
+                        <select class="custom-select" id="inputGroupSelect03">
+                            <option selected>--- Select Services ---</option>
+                            <option value="1">Food</option>
+                            <option value="2">Healthcare</option>
+                            <option value="2">Shelter</option>
+                            <option value="2">Services</option>
+                            <option value="2">Clothing</option>
+                            <option value="2">Medical Equipments</option>
+                            <option value="2">Others</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group mb-3 px-lg-3">
+
+                        <input type="password" class="form-control" placeholder="Password" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 px-lg-3">
+
+                        <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div style="text-align: center" class=" mb-3 px-lg-3">
+                        <button class="btn btn-outline-primary" style="width: 100%">Register</button>
+                    </div>
+                    <div style="text-align: center" class=" mb-3 px-lg-3 ">
+                        <p>Already have an account? <a href="login.html">Login</a></p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <br/><br/>
-
-<!-- Footer -->
-<div class="partials_footer"></div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.partials_footer').load('partials/partial_footer.html');
-    });
-</script>
-<!-- End Footer -->
 
 <!--   Core JS Files   -->
 <script src="/static/assets/js/core/jquery.min.js" type="text/javascript"></script>

@@ -1,3 +1,13 @@
+
+.help-options {
+    color: white !important;
+    font-weight: bolder !important;
+    background-size: cover;
+    height: 60px;
+
+}
+
+
 #exTab1 .tab-content {
     color: white;
     background-color: #428bca;
@@ -449,7 +459,7 @@
         column-count: 2 !important;
     }
 
-    .card-columns.team{
+    .card-columns.team {
         column-count: 3 !important;
     }
 
@@ -472,16 +482,16 @@
     }
 }
 
-.profile-placeholder{
+.profile-placeholder {
     text-align: center;
 }
 
-.profile-pic{
+.profile-pic {
     border-radius: 50%;
     width: 90px;
 }
 
-.social-links{
+.social-links {
     text-align: center;
 }
 

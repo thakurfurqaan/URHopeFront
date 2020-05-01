@@ -90,7 +90,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-6 col-12">
-            <div class="card-custom mt-2 mt-lg-0">
+            <div class="card-custom mt-2 mt-lg-0 pb-5">
                 <h3 class="mb-3 mt-3 row justify-content-center">Need Help?</h3>
                 <!--
                 <div class="row justify-content-center">
@@ -143,26 +143,31 @@
                         <h6 class="mt-4 ">What do you need help with?</h6>
                     </div>
 
-                    <div class="help-options col" align="center">
-                        <input type="submit" class=" btn-sm mb-2 btn btn-outline-warning help-options" style=""
-                               name="name" id="" value="Food" Selected="False">
+                    <div class="help-options row justify-content-center mb-5" align="center">
+                        <button type="submit" class=" btn mb-2 btn help-options mr-1"
+                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('static/assets/img/Food.png') no-repeat center;"
+                                name="name" id="" Selected="False">Food
+                        </button>
 
-                        <input type="submit" class=" btn btn-sm mb-2  btn-outline-info help-options" style=""
-                               name="name" id="" value="Clothing" Selected="False">
+                        <button type="submit" class=" btn mb-2 mx-1 btn help-options"
+                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('static/assets/img/Helath.png') no-repeat center;"
+                                name="name" id="" Selected="False">Health
+                        </button>
 
-                        <input type="submit" class=" btn btn-sm mb-2 btn-outline-danger help-options" style=""
-                               name="name" id="" value="Shelter" Selected="False">
+                        <button type="submit" class=" btn mb-2 mx-1 btn help-options"
+                                style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('static/assets/img/Shelter.png') no-repeat center;"
+                                name="name" id="" Selected="False">Shelter
+                        </button>
 
-                        <input type="submit" class=" btn btn-sm mb-2 btn-outline-success help-options" style=""
-                               name="name" id="" value="Healthcare" Selected="False">
+                        <button type="submit" class=" btn mb-2 btn mx-1 help-options"
+                                style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('static/assets/img/E-Pass.png') no-repeat center;"
+                                name="name" id="" Selected="False">E-Pass
+                        </button>
 
-                        <input type="submit" class=" btn btn-sm mb-2 btn-outline-dark help-options" style=""
-                               name="name" id="" value="Medical Equipments" Selected="False">
-
-                        <div align="center">
-                            <input type="submit" class=" btn btn-sm mb-2 btn-outline-secondary help-options" style=""
-                                   name="name" id="" value="Others" Selected="False">
-                        </div>
+                        <button type="submit" class=" btn mb-2 btn ml-1 help-options"
+                                style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('static/assets/img/Others.png') no-repeat center;"
+                                name="name" id="" Selected="False">Others
+                        </button>
 
                         <div class="row justify-content-center" hidden>
                             <button type="submit" class=" btn btn-sm mb-2  btn-outline-dark next-btn"
@@ -170,7 +175,8 @@
                                     name="name" id="">Find Help <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-1 mb-3">
+                    <div class="mb-3">  </div>
+                    <div class="row justify-content-center mt-1 mb-3" hidden>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
