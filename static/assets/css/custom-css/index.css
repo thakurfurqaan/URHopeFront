@@ -1,3 +1,34 @@
+#exTab1 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
+#exTab2 h3 {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+    border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0;
+}
+
+#exTab3 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
+
 /* PINCODE SEARCH STARTS */
 
 .autocomplete {
@@ -46,7 +77,14 @@
 
 .navbar .nav-link {
     color: #fff;
-    font-size: medium;
+    font-size: small;
+}
+
+@media (max-width: 576px) {
+    .navbar .nav-link {
+        font-size: medium;
+    }
+
 }
 
 .navbar .nav-link:hover,
@@ -147,12 +185,12 @@
 }
 
 @media (max-width: 576px) {
-    .step3-table h6 {
+    .step3-table h6, .initiative-heading h4 {
         font-size: x-small;
     !important;
     }
 
-    .step3-table p {
+    .step3-table p, .initiative-description p, .modal .table-body, .modal th {
         font-size: xx-small;
     !important;
     }
@@ -168,38 +206,206 @@
 }
 
 @media (max-width: 768px) {
-    .step3-table h6 {
+    .step3-table h6, .initiative-heading h4 {
         font-size: small;
     !important;
     }
 
-    .step3-table p {
+    .step3-table p, .initiative-description p, .modal .table-body, .modal th {
         font-size: x-small;
     !important;
     }
 
 }
 
-.step3-table > thead > tr > td,
-.step3-table > thead > tr > th {
-    border: none;
-}
 
-.step3-table > tbody > tr > td,
 .step3-table > tbody > tr > th,
 .step3-table > tfoot > tr > td,
 .step3-table > tfoot > tr > th,
 .step3-table > thead > tr > td,
 .step3-table > thead > tr > th {
-    padding: 5px;
+    border: none;
+}
+
+/*.step3-table > tbody > tr {*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;*/
+/*}*/
+
+/*.step3-table > tbody > tr > td,*/
+/*.step3-table > thead > tr > td {*/
+/*    padding: 20px;*/
+/*!important;*/
+/*}*/
+
+
+/*.step3-table > tbody > tr > td,*/
+/*.step3-table > tbody > tr > th,*/
+/*.step3-table > tfoot > tr > td,*/
+/*.step3-table > tfoot > tr > th,*/
+/*.step3-table > thead > tr > td,*/
+/*.step3-table > thead > tr > th {*/
+/*    padding: 5px;*/
+/*}*/
+
+.modal .table > tbody > tr > td {
+    border: none;
 }
 
 .step3-table > thead > tr > th {
     font-weight: bold;
+    color: gray;
 }
 
-.step3-table-div {
-    padding: 50px 30px;
+.step3-table {
+    /*border-collapse: separate !important;*/
+    /*border-spacing: 0px 20px !important;*/
+}
+
+.step3-table-div button,
+.modal-body button, .modal-footer button {
+    font-size: xx-small;
+}
+
+.step3-table h6, .initiative-heading h4 {
+    font-size: x-small;
+}
+
+.step3-table p, .initiative-description p, .modal .table-body, .modal th {
+    font-size: xx-small;
+}
+
+.step3-table td {
+    padding: 0.25rem !important;
+}
+
+.step3-table-nav {
+    font-size: x-small;
+}
+
+.search-filter .dropdown-item {
+    font-size: x-small;
+}
+
+.step3-table-nav .nav-link {
+    padding: .5rem .5rem;
+}
+
+.step3-table-div h4 {
+    font-size: small;
+}
+
+@media (min-width: 576px) {
+
+
+}
+
+@media (min-width: 768px) {
+    .modal-body button, .modal-footer button {
+        font-size: x-small;
+    }
+
+    .step3-table h6, .initiative-heading h4 {
+        font-size: small;
+    }
+
+    .step3-table p, .initiative-description p, .modal .table-body, .modal th {
+        font-size: x-small;
+    }
+
+    .step3-table td {
+        padding: 0.5rem !important;
+    }
+
+    .step3-table-nav {
+        font-size: small;
+    }
+
+    .search-filter .dropdown-item {
+        font-size: small;
+    }
+
+    .step3-table-nav .nav-link {
+        padding: .5rem 1rem;
+    }
+
+    .step3-table-div h4 {
+        font-size: medium;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .step3-table-div button,
+    .modal-body button, .modal-footer button {
+        font-size: small;
+    }
+
+    .step3-table h6, .initiative-heading h4 {
+        font-size: large;
+    }
+
+    .step3-table p, .initiative-description p, .modal .table-body, .modal th {
+        font-size: small;
+    }
+
+    .step3-table td {
+        padding: 0.75rem !important;
+    }
+
+    .step3-table-nav {
+        font-size: medium;
+    }
+
+    .search-filter .dropdown-item {
+        font-size: medium;
+    }
+
+    .step3-table-nav .nav-link {
+        padding: .5rem 1rem;
+    }
+
+    .step3-table-div h4 {
+        font-size: xx-large;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .step3-table-div button,
+    .modal-body button, .modal-footer button {
+        font-size: small;
+    }
+
+    .step3-table h6, .initiative-heading h4 {
+        font-size: large;
+    }
+
+    .step3-table p, .initiative-description p, .modal .table-body, .modal th {
+        font-size: small;
+    }
+
+    .step3-table td {
+        padding: 0.75rem !important;
+    }
+
+    .step3-table-nav {
+        font-size: medium;
+    }
+
+    .search-filter .dropdown-item {
+        font-size: medium;
+    }
+
+    .step3-table-nav .nav-link {
+        padding: .5rem 1rem;
+    }
+
+    .step3-table-div h4 {
+        font-size: xx-large;
+    }
+
 }
 
 /* HELP SECTION ENDS */
@@ -214,7 +420,7 @@
     font-size: 12px;
 }
 
-.card-text{
+.card-text {
     font-weight: lighter !important;
     color: gray;
 }
@@ -237,6 +443,10 @@
     .card {
         font-size: 15px;
     }
+
+    .card h4 {
+        font-size: large;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -255,6 +465,13 @@
     text-align: justify !important;
 }
 
+@media (max-width: 425px) {
+    .help-card button,
+    .help-card h6,
+    .help-card a{
+        font-size: 0.75rem;
+    }
+}
 
 /* CARDS ENDS */
 
@@ -267,8 +484,12 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* MISC ENDS */
 
-.button-checkbox .active:before{
+.button-checkbox .active:before {
 
 }
