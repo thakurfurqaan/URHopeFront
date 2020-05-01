@@ -24,6 +24,7 @@ This repository is for the Front End Development of URHope.in.
   - Team Members Modules
 
 # Pending Tasks  
+- Filtering System on List of Initiatives Page
 - Logo
 - Registration Page
   - Form 
