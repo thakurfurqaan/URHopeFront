@@ -5,15 +5,23 @@ This repository is for the Front End Development of URHope.in.
 - Homepage
   - Navbar
   - Help Section
+    - Pincode Field (Javascript)
+    - Help Options
   - About Us Section
   - Twitter Posts Section
   - Footer
 - Registration Page
+  - Form
 - Login Page
+  - Form
 - FAQ Page
+  - Q&A
 - Form Page
+  - Google Form Integration
 - About Us Page
-- Contact Us Page
+  - About Us Section
+- Team Page
+  - Team Members Modules
 
 # Pending Tasks  
 - Logo
