@@ -6,9 +6,23 @@
 </head>
 <body>
 <script>
-    var fs = require("fs");
-    var text = fs.readFileSync("POTABLE.txt");
-    console.log(text);
+    let jsondata;
+    var arr;
+    console.log(arr);
+    fetch('POTABLE.txt').then(
+        function (u) {
+            return u.json();
+        }
+    ).then(
+        function (json) {
+            jsondata = json;
+            arr = jsondata;
+            console.log(jsondata[0]);
+        }
+    );
+
+
+
 </script>
 
 

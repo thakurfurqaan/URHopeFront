@@ -46,7 +46,18 @@
     top: 100%;
     left: 0;
     right: 0;
+    max-height: 300px;
+    overflow: scroll;
+    font-size: small;
 }
+
+@media (max-width: 576px) {
+    .autocomplete-items{
+        font-size: xx-small;
+    }
+
+}
+
 
 .autocomplete-items div {
     padding: 10px;
