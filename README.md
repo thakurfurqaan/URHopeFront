@@ -1,8 +1,23 @@
 # URHope Front End
 This repository is for the Front End Development of URHope.in.
 
+# Pending Tasks  
+
+- Registration Page
+  - Form 
+    - Separate for Volunteers and NGOs
+    - Addition of more fields
+- Profile Page
+  - Edit Profile
+  - Display Profile
+  - Task List
+
+- Code Optimisation and Organisation
+
+
 # Tasks Completed
 - Homepage
+  - Pincode Autocomplete
   - Navbar
   - Help Section
     - Pincode Field (Javascript)
@@ -22,21 +37,24 @@ This repository is for the Front End Development of URHope.in.
   - About Us Section
 - Team Page
   - Team Members Modules
-- Misc
-  - Filtering System on List of Initiatives Page
-  - Logo
-  - Make phone numbers dialable
 
-# Pending Tasks  
+# Task Completion Timeline
 
-- Registration Page
-  - Form 
-    - Separate for Volunteers and NGOs
-    - Addition of more fields
-- Profile Page
-  - Edit Profile
-  - Display Profile
-  - Task List
-- Contact Us Page
-  - Form
-- Code Optimisation and Organisation
+29/4/20
+- Need Help and Initivatives Section
+- Initiatives Table
+
+30/4/20 (Redesigning)
+- Homepage 50% Completed
+  - Pincode Autocomplete
+- Navbar
+
+1/5/20
+- Homepage
+
+2/5/20
+- Contact Us Page Form
+- Filtering System on List of Initiatives Page
+- Logo
+- Make phone numbers dialable
+
