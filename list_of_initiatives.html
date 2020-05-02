@@ -96,27 +96,30 @@
     <div class="row mt-5">
         <div class="col mt-lg-0">
             <div class="card-custom p-lg-5 step3-table-div">
-                <div class="step3-title row justify-content-between">
-                    <h4 class="col-6 font-weight-bold">Food</h4>
+                <div class="step3-title row justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0 col-6 font-weight-bold">Food</h4>
                     <div class="search-filter col-6">
                         <div class="row justify-content-end align-items-center">
+
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-light dropdown-toggle"
+                                <button type="button" class="btn btn-sm btn-light"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
-                                        aria-expanded="false" style="text-transform: capitalize">Choose Filter...
+                                        aria-expanded="false" style="text-transform: capitalize">
+                                    <select
+                                            class="custom-select-sm custom-select filter">
+                                        <option selected>Choose Filter...</option>
+                                        <option value="State Government">State Government</option>
+                                        <option value="Central Government">Central Government</option>
+                                        <option value="Others">Others</option>
+                                    </select>
                                 </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">All</a>
-                                    <a class="dropdown-item" href="#">Ration</a>
-                                    <a class="dropdown-item" href="#">Hunger Helplines</a>
-                                    <a class="dropdown-item" href="#">Food Delivery</a>
-                                    <a class="dropdown-item" href="#">Others</a>
-                                </div>
-                            </div><!-- /btn-group -->
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <input id="myInput" type="text" placeholder="Search.." hidden>
 
 
                 <div class="row mt-2">
@@ -152,8 +155,7 @@
                                 <tr>
                                     <td class="align-middle">
                                         <div class="initiative-heading pt-4">
-                                            <h6 class="font-weight-bold mb-0">Public Food Shelter with a long name for 2
-                                                lines</h6>
+                                            <h6 class="font-weight-bold mb-0">We are Central Government Based</h6>
 
                                         </div>
                                         <div class="initiative-description">
@@ -174,26 +176,25 @@
                                                 data-target="#exampleModalCenter">
                                             View
                                         </button>
+                                    </td>
+                                    <td class="align-middle" hidden>
+                                        Central Government
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-middle">
                                         <div class="initiative-heading pt-4">
-                                            <h6 class="font-weight-bold mb-0">Public Food Shelter with a long name for 2
-                                                lines</h6>
+                                            <h6 class="font-weight-bold mb-0">We are based in both CG and O</h6>
 
                                         </div>
                                         <div class="initiative-description">
-                                            <p class="text-muted">Noti Karanprayag Rd, near Tehsil Office, Karanprayag,
-                                                Uttarakkhand
-                                                246444</p>
+                                            <p class="text-muted">We are located in gujarat</p>
                                         </div>
                                     </td>
                                     <td class="align-middle">
                                         <div class="initiative-contact align-content-around">
                                             <button class="btn btn-sm btn-outline-primary mt-1">01334-235010</button>
                                             <button class="btn btn-sm btn-outline-primary mt-1">01334-235010</button>
-                                            <button class="btn btn-sm btn-outline-primary mt-1">9897059100</button>
                                         </div>
                                     </td>
                                     <td class="align-middle">
@@ -201,19 +202,19 @@
                                                 data-target="#exampleModalCenter">
                                             View
                                         </button>
+                                    </td>
+                                    <td class="align-middle" hidden>
+                                        Central Government Others
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-middle">
                                         <div class="initiative-heading pt-4">
-                                            <h6 class="font-weight-bold mb-0">Public Food Shelter with a long name for 2
-                                                lines</h6>
+                                            <h6 class="font-weight-bold mb-0">We are a State Government Org</h6>
 
                                         </div>
                                         <div class="initiative-description">
-                                            <p class="text-muted">Noti Karanprayag Rd, near Tehsil Office, Karanprayag,
-                                                Uttarakkhand
-                                                246444</p>
+                                            <p class="text-muted">We operate at state government level</p>
                                         </div>
                                     </td>
                                     <td class="align-middle">
@@ -228,13 +229,16 @@
                                                 data-target="#exampleModalCenter">
                                             View
                                         </button>
+                                    </td>
+                                    <td class="align-middle" hidden>
+                                        State Government
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
-
-
                         </div>
+
+
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
                             <table class="table step3-table">
@@ -249,8 +253,8 @@
                                 <tr>
                                     <td class="align-middle">
                                         <div class="initiative-heading pt-4">
-                                            <h6 class="font-weight-bold mb-0">Public Food Shelter with a long name for 2
-                                                lines</h6>
+                                            <h6 class="font-weight-bold mb-0">We are based in both Others and Central
+                                                Government</h6>
 
                                         </div>
                                         <div class="initiative-description">
@@ -271,6 +275,9 @@
                                                 data-target="#exampleModalCenter">
                                             View
                                         </button>
+                                    </td>
+                                    <td class="align-middle" hidden>
+                                        Central Government Others
                                     </td>
                                 </tr>
                                 </tbody>
@@ -291,7 +298,6 @@
     </div>
 </div>
 
-<!-- Button trigger modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -373,12 +379,50 @@
     $(document).ready(function () {
         $('.partials_footer').load('partials/partial_footer.html');
     });
+
+    $(document).ready(function () {
+        $("select.filter").change(function () {
+            var selectedOption = $(this).children("option:selected").val();
+            if (selectedOption === 'Choose Filter...') {
+                var value = '';
+                $(".step3-table tbody > tr ").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            } else {
+                var value = selectedOption.toLowerCase();
+                $(".step3-table tbody > tr ").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            }
+        });
+    });
+
+    //Search Input Field (DONOT REMOVE)
+    /*
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $(".step3-table tbody > tr ").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+    */
+
+
 </script>
-<!-- End Footer -->
+<!--
+End
+Footer -->
 
 <!--   Core JS Files   -->
-<script src="/static/assets/js/core/jquery.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/core/popper.min.js" type="text/javascript"></script>
+< script
+src = "/static/assets/js/core/jquery.min.js"
+type = "text/javascript" ></script>
+<
+script
+src = "/static/assets/js/core/popper.min.js"
+type = "text/javascript" ></script>
 <script src="/static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
 <script src="/static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->

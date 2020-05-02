@@ -246,26 +246,16 @@
     border: none;
 }
 
-/*.step3-table > tbody > tr {*/
-/*    border-radius: 5px;*/
-/*    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;*/
-/*}*/
+.filter {
+    border: none !important;
+    background-color: transparent !important;
+    font-size: 0.5rem !important;
+}
 
-/*.step3-table > tbody > tr > td,*/
-/*.step3-table > thead > tr > td {*/
-/*    padding: 20px;*/
-/*!important;*/
-/*}*/
+.filter:focus {
+    outline: none;
+}
 
-
-/*.step3-table > tbody > tr > td,*/
-/*.step3-table > tbody > tr > th,*/
-/*.step3-table > tfoot > tr > td,*/
-/*.step3-table > tfoot > tr > th,*/
-/*.step3-table > thead > tr > td,*/
-/*.step3-table > thead > tr > th {*/
-/*    padding: 5px;*/
-/*}*/
 
 .modal .table > tbody > tr > td {
     border: none;
@@ -274,11 +264,6 @@
 .step3-table > thead > tr > th {
     font-weight: bold;
     color: gray;
-}
-
-.step3-table {
-    /*border-collapse: separate !important;*/
-    /*border-spacing: 0px 20px !important;*/
 }
 
 .step3-table-div button,
@@ -388,6 +373,10 @@
         font-size: xx-large;
     }
 
+    .filter {
+        font-size: 0.875rem !important;
+    }
+
 
 }
 
@@ -423,6 +412,10 @@
 
     .step3-table-div h4 {
         font-size: xx-large;
+    }
+
+    .filter {
+        font-size: 0.875rem !important;
     }
 
 }
