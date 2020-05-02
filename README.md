@@ -3,6 +3,7 @@ This repository is for the Front End Development of URHope.in.
 
 # Pending Tasks  
 
+- Navbar Font Weight Increment
 - Registration Page
   - Form 
     - Separate for Volunteers and NGOs
@@ -11,16 +12,17 @@ This repository is for the Front End Development of URHope.in.
   - Edit Profile
   - Display Profile
   - Task List
-
 - Code Optimisation and Organisation
 
 
 # Tasks Completed
+- Overall Website
+  - Logo
+  - Make phone numbers dialable
 - Homepage
-  - Pincode Autocomplete
   - Navbar
   - Help Section
-    - Pincode Field (Javascript)
+    - Pincode Field Autocomplete
     - Help Options
   - About Us Section
   - Twitter Posts Section
@@ -37,6 +39,12 @@ This repository is for the Front End Development of URHope.in.
   - About Us Section
 - Team Page
   - Team Members Modules
+- Contact Us Page 
+  - Form
+- List of initiatives Page
+  - Filtering System for table
+- Find Relief Anywhere Page
+  - 50% of Homepage
 
 # Task Completion Timeline
 
@@ -51,10 +59,27 @@ This repository is for the Front End Development of URHope.in.
 
 1/5/20
 - Homepage
+  - About Us Section
+  - Twitter Posts Section
+  - Footer
+- Registration Page
+  - Form
+- Login Page
+  - Form
+- FAQ Page
+  - Q&A
+- Form Page
+  - Google Form Integration
+- About Us Page
+  - About Us Section
+- Team Page
+  - Team Members Info
 
 2/5/20
 - Contact Us Page Form
 - Filtering System on List of Initiatives Page
 - Logo
 - Make phone numbers dialable
+- Homepage Help Section Redesign
+- Find Relief Anywhere Page Created
 
