@@ -22,16 +22,18 @@ This repository is for the Front End Development of URHope.in.
   - About Us Section
 - Team Page
   - Team Members Modules
-
-# Pending Tasks  
+  
+-- Miscelleneous
 - Filtering System on List of Initiatives Page
 - Logo
+- Make phone numbers dialable
+
+# Pending Tasks  
+
 - Registration Page
   - Form 
     - Separate for Volunteers and NGOs
     - Addition of more fields
-- List of Initiatives
-  - Make phone numbers dialable
 - Profile Page
   - Edit Profile
   - Display Profile
