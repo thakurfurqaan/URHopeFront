@@ -22,10 +22,10 @@ This repository is for the Front End Development of URHope.in.
   - About Us Section
 - Team Page
   - Team Members Modules
-  
-- Filtering System on List of Initiatives Page
-- Logo
-- Make phone numbers dialable
+- Misc
+  - Filtering System on List of Initiatives Page
+  - Logo
+  - Make phone numbers dialable
 
 # Pending Tasks  
 
